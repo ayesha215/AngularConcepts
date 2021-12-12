@@ -27,6 +27,9 @@ import { AgePipePipe } from './Pipe_Implementation/age-pipe.pipe';
 import { DataComponent } from './data/data.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterWithReactiveFormsComponent } from './register-with-reactive-forms/register-with-reactive-forms.component';
+import { MyLibModule } from 'my-lib';
+import { MyTableComponent } from 'projects/my-lib/src/lib/my-table/my-table.component';
+import { LibraryImplementationComponent } from './library-implementation/library-implementation.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,8 @@ import { RegisterWithReactiveFormsComponent } from './register-with-reactive-for
     DataComponent,
     ProductsComponent,
     RegisterWithReactiveFormsComponent,
+    MyTableComponent,
+    LibraryImplementationComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,9 @@ import { RegisterWithReactiveFormsComponent } from './register-with-reactive-for
     HttpClientModule,
     CommonModule,
     ReactiveFormsModule,
+    MyLibModule,
   ],
+
   providers: [AppService],
   bootstrap: [AppComponent],
 })

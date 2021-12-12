@@ -14,6 +14,7 @@ import { ParentComponent } from './hooks/parent/parent.component';
 import { DataComponent } from './data/data.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterWithReactiveFormsComponent } from './register-with-reactive-forms/register-with-reactive-forms.component';
+import { LibraryImplementationComponent } from './library-implementation/library-implementation.component';
 
 const routes: Routes = [
   {
@@ -64,6 +65,10 @@ const routes: Routes = [
   {
     path: 'register-with-reactive-forms',
     component: RegisterWithReactiveFormsComponent,
+  },
+  {
+    path: 'library-implementation',
+    component: LibraryImplementationComponent,
   },
 ];
 

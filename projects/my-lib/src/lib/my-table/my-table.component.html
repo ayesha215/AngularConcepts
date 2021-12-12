@@ -1,0 +1,38 @@
+<p-card
+  header="Library "
+  [style]="{
+    width: '20rem',
+    'margin-top': '2em',
+    'margin-bottom': '2em',
+    'margin-left': '40rem '
+  }"
+>
+  <ng-template pTemplate="header">
+    <img alt="Card" src="assets/pic.jpg" />
+  </ng-template>
+  <p><b> </b></p>
+  <p>
+    <b>Title:{{ title }} </b>
+  </p>
+  <p>
+    <b>Gender:{{ gender }} </b>
+  </p>
+  <p>
+    <b>Email :{{ email }} </b>
+  </p>
+  <p>
+    <b>Birth Day :{{ birth }} </b>
+  </p>
+  <p>
+    <b>Age :{{ age }} </b>
+  </p>
+
+  <ng-template pTemplate="footer">
+    <p-button
+      type="submit"
+      label="Update"
+      icon="pi pi-check"
+      [style]="{ 'margin-top': '2em', 'margin-left': '.25em' }"
+    ></p-button>
+  </ng-template>
+</p-card>
