@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "dev": "nodemon ./node_modules/mock-user-auth/bin/www.js",
     "test": "ng test"
   },
   "private": true,
@@ -18,6 +19,9 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "mock-user-auth": "^1.0.15",
+    "primeicons": "^5.0.0",
+    "primeng": "^12.2.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

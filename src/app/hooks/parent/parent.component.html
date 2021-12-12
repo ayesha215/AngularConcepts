@@ -1,0 +1,19 @@
+<p-card
+  header="Angular Compoent Hook LifeCycle"
+  [style]="{
+    width: '20rem',
+    'margin-top': '2em',
+    'margin-bottom': '2em',
+    'margin-left': '40rem '
+  }"
+>
+  <ng-template pTemplate="header">
+    <img alt="Card" src="assets/pic.jpg" />
+  </ng-template>
+
+  <h3>Parent value</h3>
+
+  <h3>Child value</h3>
+
+  <app-child-component {{changedata}}></app-child-component>
+</p-card>

@@ -1,0 +1,57 @@
+<p-card
+  header="Update Profile"
+  [style]="{
+    width: '20rem',
+    'margin-top': '2em',
+    'margin-bottom': '2em',
+    'margin-left': '40rem '
+  }"
+>
+  <ng-template pTemplate="header">
+    <img alt="Card" src="assets/pic.jpg" />
+  </ng-template>
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      #myVal
+      type="text"
+      class="form-control"
+      placeholder="Enter new Name"
+      [(ngModel)]="user.name"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter new email"
+      [(ngModel)]="user.email"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Enter new password"
+      [(ngModel)]="user.password"
+    />
+  </div>
+
+  <div class="mb-2 mt-4 text-center">
+    <div class="text-right">
+      <button
+        type="button"
+        class="btnSubmit mt-3 btn btn-primary"
+        routerLink="/profile"
+        (click)="onSubmit()"
+      >
+        <small class="font-weight-bold">Save</small>
+      </button>
+    </div>
+  </div></p-card
+>

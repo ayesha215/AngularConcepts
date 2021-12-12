@@ -1,0 +1,27 @@
+<p-card
+  header="Login"
+  [style]="{
+    width: '20rem',
+    'margin-top': '2em',
+    'margin-bottom': '2em',
+    'margin-left': '30rem '
+  }"
+>
+  <ng-template pTemplate="header">
+    <img alt="Card" src="assets/pic.jpg" />
+  </ng-template>
+
+  <form #AddUserForm="ngForm" (ngSubmit)="onSubmit(AddUserForm.value)">
+    <label>Email</label><br />
+    <input type="email" ngModel name="email" /><br /><br />
+    <label>Password</label><br />
+    <input type="password" ngModel name="password" /><br /><br />
+
+    <p-button
+      type="submit"
+      label="Login"
+      icon="pi pi-check"
+      [style]="{ 'margin-left': '.25em' }"
+    ></p-button>
+  </form>
+</p-card>

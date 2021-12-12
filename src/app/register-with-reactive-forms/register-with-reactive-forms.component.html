@@ -1,0 +1,65 @@
+<p>register-with-reactive-forms works!</p>
+<p-card
+  header="Reactive Forms"
+  [style]="{
+    width: '20rem',
+    'margin-top': '2em',
+    'margin-bottom': '2em',
+    'margin-left': '40rem '
+  }"
+>
+  <ng-template pTemplate="header">
+    <img alt="Card" src="assets/pic.jpg" />
+  </ng-template>
+  <form [formGroup]="registerform" (ngSubmit)="onRegister(registerform.value)">
+    <label> Name </label><br />
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      placeholder="Enter Your Name
+            "
+    />
+    <div
+      style="color: red"
+      *ngIf="
+        (registerform.get('name').dirty || registerform.get('name').touched) &&
+        registerform.get('name').invalid
+      "
+    >
+      Please Enter valid username.
+    </div>
+    <br /><br />
+    <label> Email </label><br />
+    <input
+      id="email"
+      type="text"
+      formControlName="email"
+      placeholder="Enter Your Email
+            "
+    />
+    <div
+      style="color: red"
+      *ngIf="
+        (registerform.get('email').dirty ||
+          registerform.get('email').touched) &&
+        registerform.get('email').invalid
+      "
+    >
+      Please Enter Valid Email
+    </div>
+    <br /><br />
+
+    <label> Password </label><br />
+    <input
+      id="password"
+      type="password"
+      formControlName="password"
+      placeholder="Enter Passwoed
+              "
+    /><br /><br />
+    <div>
+      <p-button type="submit" [disabled]="registerform.invalid">Send</p-button>
+    </div>
+  </form>
+</p-card>

@@ -1,0 +1,18 @@
+<p-card
+  [style]="{
+    width: '20rem',
+    'margin-top': '2em',
+    'margin-bottom': '2em',
+    'margin-left': '40rem '
+  }"
+>
+  <ng-template pTemplate="header">
+    <img alt="Card" src="assets/pic.jpg" />
+    <ng-content selector="header"></ng-content>
+  </ng-template>
+  <ng-content selector="content"></ng-content>
+
+  <ng-template pTemplate="footer">
+    <ng-content selector="footer"></ng-content>
+  </ng-template>
+</p-card>

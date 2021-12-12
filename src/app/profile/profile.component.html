@@ -1,0 +1,29 @@
+<h1>Welcome {{ this.user.name }}</h1>
+
+<p-card
+  header="My Profile"
+  [style]="{
+    width: '20rem',
+    'margin-top': '2em',
+    'margin-bottom': '2em',
+    'margin-left': '40rem '
+  }"
+>
+  <ng-template pTemplate="header">
+    <img alt="Card" src="assets/pic.jpg" />
+  </ng-template>
+  <p [innerHtml]="userInfo.id"><b> </b></p>
+  <p [innerHtml]="userInfo.name"><b>Name: </b></p>
+  <p><b>Email: </b> {{ userInfo.email }}</p>
+  <p><b>Password : </b>{{ userInfo.password }}</p>
+
+  <ng-template pTemplate="footer">
+    <p-button
+      routerLink="/update-profile/{{ userInfo.id }}"
+      type="submit"
+      label="Update"
+      icon="pi pi-check"
+      [style]="{ 'margin-top': '2em', 'margin-left': '.25em' }"
+    ></p-button>
+  </ng-template>
+</p-card>

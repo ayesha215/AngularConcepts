@@ -1,0 +1,17 @@
+.blue{
+    color:#037FC2;
+}
+.blue1{
+    background:#037FC2;
+    color:#fff;
+}
+.green{
+    color:#079E32;
+}
+.fs-18{
+    font-size:18px;
+}
+.collapse-none{
+    border-collapse: unset !important;
+    width:100%;
+}

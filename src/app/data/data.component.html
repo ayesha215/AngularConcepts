@@ -1,0 +1,33 @@
+<h4>Using Custom Pipe</h4>
+<table [ngClass]="'collapse-none'" width="100" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th [ngClass]="['blue']">Employee List</th>
+    </tr>
+  </thead>
+  <thead>
+    <tr [ngClass]="'blue1 white'">
+      <th [ngClass]="'center'">Id</th>
+      <th [ngClass]="'center'">Name</th>
+      <th [ngClass]="'center'">City</th>
+      <th [ngClass]="'center'">Salary</th>
+      <th [ngClass]="'center'">DOB</th>
+      <th [ngClass]="'center'">Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of teams; let i = index">
+      <td [ngClass]="'center'">10{{ i + 1 }}</td>
+      <td [ngClass]="'center'">{{ member.name }}</td>
+      <td [ngClass]="'center'">{{ member.city }}</td>
+      <td [ngClass]="'center'">{{ member.salary | currency: "Rs":true }}</td>
+      <td [ngClass]="'center'">{{ member.dob }}</td>
+      <td [ngClass]="'center'">{{ member.dob | agePipe }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <input [(ngModel)]="user.dateOfBirth" />
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,14 @@
+<div id="test1" class="col s12" *ngFor="let product of products$ | async">
+  <div class="row">
+    <div>
+      <p-card>
+        <h4>Title: {{ product.title }}</h4>
+        <p><b>Id: </b> {{ product.id }}</p>
+        <p><b>Price: </b> {{ product.price }}</p>
+        <p><b>Description : </b> {{ product.description }}</p>
+        <p><b>Category : </b> {{ product.category }}</p>
+        <p-button>Add to Cart</p-button>
+      </p-card>
+    </div>
+  </div>
+</div>
